@@ -1,9 +1,13 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import LogoComponent from '../subComponents/LogoComponent';
 import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import { Link } from 'react-router-dom';
+import { YinYang } from './AllSvgs';
+import { useState } from 'react';
+import Intro from './Intro';
+
 
 const MainContainer = styled.div`
 background: ${props =>props.theme.body};
@@ -41,7 +45,7 @@ z-index: 1;
 `
 
 const ABOUT = styled(Link)`
-color: ${props => props.theme.text};
+color: ${props => props.click ? props.theme.body : props.theme.text};
 position: absolute;
 top: 44%;
 left: calc(1rem + 2vw);
@@ -50,30 +54,90 @@ text-decoration: none;
 z-index: 1;
 `
 
-const BottomBar = styled.div`
-position: absolute;
-bottom: 1rem;
-left: 0;
-right: 0;
-width: 100%;
+// const BottomBar = styled.div`
+// position: absolute;
+// bottom: 1rem;
+// left: 0;
+// right: 0;
+// width: 100%;
 
-display: flex;
-justify-content: center;
+// display: flex;
+// justify-content: center;
+// `
+
+// const SKILLS = styled(Link)`
+// color: ${props => props.theme.text};
+// text-decoration: none;
+// z-index: 1;
+// `
+const rotate = keyframes`
+from {
+  transform: rotate(0);
+}
+to {
+  transform: rotate(360deg);
+}
 `
 
-const SKILLS = styled(Link)`
-color: ${props => props.theme.text};
-text-decoration: none;
+
+const Center = styled.button`
+position: absolute;
+top: ${props => props.click ? '85%' : '50%'};
+left: ${props => props.click ? '92%' : '50%'};
+transform: translate(-50%, -50%);
+border: none;
+outline: none;
+background-color: transparent;
+cursor: pointer;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+transition : all 1s ease;
+
+&>:first-child{
+  animation: ${rotate} infinite 2s linear
+}
+
+&>:last-child{
+  display: ${props => props.click ? 'none' : 'inline-block'};
+  padding-top: 1rem;
+}
+`
+
+
+const DarkDiv = styled.div`
+position: absolute;
+top: 0;
+background-color: #000;
+bottom: 0;
+right: 50%;
+width: ${props => props.click ? '50%' : '0'};
+height: ${props => props.click ? '100%' : '0'};
 z-index: 1;
+transition: height 0.5s ease, width 1s ease 0.5s;
 `
 
 const Main = () => {
+
+  const [click,setClick] = useState(false);
+  
+  const handleClick = () => setClick(!click);
+
+
   return (
     <MainContainer>
+      <DarkDiv click={click}/>
       <Container>
       <PowerButton/>
-      <LogoComponent/>
-      <SocialIcons/>
+      <LogoComponent theme={click ? 'dark' : 'light'}/>
+      <SocialIcons theme={click ? 'dark' : 'light'}/>
+      
+      <Center click={click}>
+        <YinYang onClick={()=> handleClick()} width={click ? 100 : 150} height={click ? 100 : 150} fill='currentColor'/>
+        <span>click here</span>
+      </Center>
 
       <Contact target="_blank" to="mailto:remek6@gmail.com">
         <h2>
@@ -85,20 +149,21 @@ const Main = () => {
           Projects
         </h2>
       </PROJECTS>
-      <ABOUT to="/about">
+      <ABOUT click={click} to="/about">
         <h2>
           About
         </h2>
       </ABOUT>
-      <BottomBar>
+      {/* <BottomBar>
       <SKILLS to="/skills">
         <h2>
           My Skills
         </h2>
       </SKILLS>
-      </BottomBar>
+      </BottomBar> */}
 
       </Container>
+      {click ? <Intro click={click}/> : null}
     </MainContainer>
   )
 }
