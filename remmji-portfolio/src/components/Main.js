@@ -141,7 +141,7 @@ const Main = () => {
 
       <Contact target="_blank" to="mailto:remek6@gmail.com">
         <motion.h2
-        whileHover={{scale: 1.1}}
+        whileHover={{scale: 1.2}}
         whileTap={{scale: 0.9}}
         >
           Say Hi...
@@ -149,7 +149,7 @@ const Main = () => {
       </Contact>
       <PROJECTS to="/projects">
         <motion.h2
-        whileHover={{scale: 1.1}}
+        whileHover={{scale: 1.2}}
         whileTap={{scale: 0.9}}
         >
           Projects
@@ -157,7 +157,7 @@ const Main = () => {
       </PROJECTS>
       <ABOUT click={click} to="/about">
         <motion.h2
-        whileHover={{scale: 1.1}}
+        whileHover={{scale: 1.2}}
         whileTap={{scale: 0.9}}
         >
           About
