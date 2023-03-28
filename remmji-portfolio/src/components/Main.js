@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { YinYang } from './AllSvgs';
 import { useState } from 'react';
 import Intro from './Intro';
-
+import { motion } from 'framer-motion';
 
 const MainContainer = styled.div`
 background: ${props =>props.theme.body};
@@ -140,19 +140,28 @@ const Main = () => {
       </Center>
 
       <Contact target="_blank" to="mailto:remek6@gmail.com">
-        <h2>
+        <motion.h2
+        whileHover={{scale: 1.1}}
+        whileTap={{scale: 0.9}}
+        >
           Say Hi...
-        </h2>
+        </motion.h2>
       </Contact>
       <PROJECTS to="/projects">
-        <h2>
+        <motion.h2
+        whileHover={{scale: 1.1}}
+        whileTap={{scale: 0.9}}
+        >
           Projects
-        </h2>
+        </motion.h2>
       </PROJECTS>
       <ABOUT click={click} to="/about">
-        <h2>
+        <motion.h2
+        whileHover={{scale: 1.1}}
+        whileTap={{scale: 0.9}}
+        >
           About
-        </h2>
+        </motion.h2>
       </ABOUT>
       {/* <BottomBar>
       <SKILLS to="/skills">
