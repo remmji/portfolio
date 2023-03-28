@@ -7,7 +7,7 @@ import GlobalStyle from "./globalStyles";
 // Components
 import Main from './components/Main';
 import AboutPage from './components/AboutPage';
-import BlogPage from './components/BlogPage';
+import Projects from './components/Projects';
 import WorkPage from './components/WorkPage';
 import MySkillsPage from './components/MySkillsPage';
 
@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <Main/> } />
         <Route path="about" element={ <AboutPage/> } />
-        <Route path="blog" element={ <BlogPage/> } />
+        <Route path="projects" element={ <Projects/> } />
         <Route path="work" element={ <WorkPage/> } />
         <Route path="skills" element={ <MySkillsPage/> } />
       </Routes>

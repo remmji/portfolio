@@ -1,7 +1,7 @@
 import React from 'react'
-import { Github, Facebook } from '../components/AllSvgs'
+import { Github, Facebook, Linkedln } from '../components/AllSvgs'
 import styled from 'styled-components'
-
+import { Link } from 'react-router-dom';
 
 const Icons = styled.div`
 display: flex;
@@ -29,14 +29,19 @@ const SocialIcons = () => {
   return (
     <Icons>
         <div>
-            <a style={{color: 'inherit'}} target="_blank"  href="https://github.com/remmji">
+            <Link to="https://github.com/remmji" target="_blank" style={{color: 'inherit'}}>
                 <Github width={25} height={25} fill='currentColor' />
-            </a>
+            </Link>
         </div>
         <div>
-            <a style={{color: 'inherit'}} target="_blank" href="https://www.facebook.com/profile.php?id=100008573739739">
+            <Link to="https://www.facebook.com/profile.php?id=100008573739739" style={{color: 'inherit'}} target="_blank" >
                 <Facebook width={25} height={25} fill='currentColor' />
-            </a>
+            </Link>
+        </div>
+        <div>
+            <Link to="https://www.linkedin.com/in/remigiusz-czarnecki-598989269/?original_referer=" style={{color: 'inherit'}} target="_blank" >
+                <Linkedln width={25} height={25} fill='currentColor' />
+            </Link>
         </div>
         <Line/>
     </Icons>
