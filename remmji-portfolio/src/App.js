@@ -10,6 +10,7 @@ import AboutPage from './components/AboutPage';
 import Projects from './components/Projects';
 import WorkPage from './components/WorkPage';
 import MySkillsPage from './components/MySkillsPage';
+import SoundBar from "./subComponents/SoundBar";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
     <GlobalStyle/>
 
       <ThemeProvider theme={lightTheme}>
-
+        <SoundBar/>
       <Routes>
         <Route path="/" element={ <Main/> } />
         <Route path="about" element={ <AboutPage/> } />

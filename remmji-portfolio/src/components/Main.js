@@ -42,6 +42,10 @@ right: calc(1rem + 2vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
 z-index: 1;
+
+@media (max-width: 50em){
+right: calc(0rem + 1vw);
+}   
 `
 
 const ABOUT = styled(Link)`
@@ -104,6 +108,11 @@ transition : all 1s ease;
   display: ${props => props.click ? 'none' : 'inline-block'};
   padding-top: 1rem;
 }
+
+@media (max-width: 50em){
+top: ${props => props.click ? '90%' : '50%'};
+left: ${props => props.click ? '85%' : '50%'};
+}  
 `
 
 
@@ -117,6 +126,7 @@ width: ${props => props.click ? '50%' : '0'};
 height: ${props => props.click ? '100%' : '0'};
 z-index: 1;
 transition: height 0.5s ease, width 1s ease 0.5s;
+
 `
 
 const Main = () => {
@@ -135,12 +145,20 @@ const Main = () => {
       <SocialIcons theme={click ? 'dark' : 'light'}/>
       
       <Center click={click}>
-        <YinYang onClick={()=> handleClick()} width={click ? 100 : 150} height={click ? 100 : 150} fill='currentColor'/>
+        <YinYang onClick={()=> handleClick()} width={click ? 90 : 150} height={click ? 90 : 150} fill='currentColor'/>
         <span>click here</span>
       </Center>
 
       <Contact target="_blank" to="mailto:remek6@gmail.com">
         <motion.h2
+        initial={{
+          y:-200,
+          transition: {type:'spring', duration: 1.5, delay:1}
+        }}
+        animate={{
+          y:0,
+          transition: {type:'spring', duration:1.5, delay:1}
+        }}
         whileHover={{scale: 1.2}}
         whileTap={{scale: 0.9}}
         >
@@ -149,6 +167,14 @@ const Main = () => {
       </Contact>
       <PROJECTS to="/projects">
         <motion.h2
+        initial={{
+          y:-200,
+          transition: {type:'spring', duration: 1.5, delay:1}
+        }}
+        animate={{
+          y:0,
+          transition: {type:'spring', duration:1.5, delay:1}
+        }}
         whileHover={{scale: 1.2}}
         whileTap={{scale: 0.9}}
         >
@@ -157,6 +183,14 @@ const Main = () => {
       </PROJECTS>
       <ABOUT click={click} to="/about">
         <motion.h2
+        initial={{
+          y:-200,
+          transition: {type:'spring', duration: 1.5, delay:1}
+        }}
+        animate={{
+          y:0,
+          transition: {type:'spring', duration:1.5, delay:1}
+        }}
         whileHover={{scale: 1.2}}
         whileTap={{scale: 0.9}}
         >
