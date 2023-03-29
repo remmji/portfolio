@@ -15,7 +15,7 @@ background-color: #FCF6F4;
 padding: 0.3rem;
 border-radius: 50%;
 border: 1px solid #000;
-width: 2.5rem;
+width: 3rem;
 aspect-ratio: 1;
 
 display: flex;
@@ -39,7 +39,7 @@ const  PowerButton = () => {
   return (
     <Power>
       <Link to='/'>
-        <HomeIcon width={30} height={30} fill='currentColor'/>
+        <HomeIcon width={25} height={25} fill='currentColor'/>
       </Link>
     </Power>
   )

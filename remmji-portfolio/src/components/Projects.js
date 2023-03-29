@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./Themes";
 import { motion } from "framer-motion";
@@ -12,7 +12,6 @@ import AnimatedPageTransition from "./AnimatedPageTransition";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-
   height: 400vh;
   position: relative;
   display: flex;
@@ -25,7 +24,6 @@ const Main = styled(motion.ul)`
   left: calc(10rem + 15vw);
   height: 40vh;
   display: flex;
-
   color: white;
 `
 
@@ -54,7 +52,7 @@ const container = {
 
 
 const Projects = () => {
-  
+ 
   const ref = useRef(null);
   const yinyang = useRef(null);
 
@@ -81,7 +79,7 @@ const Projects = () => {
         <LogoComponent theme="dark" />
         <PowerButton />
 
-        <Main ref={ref} variants={container} initial="hidden" animate="show">
+        <Main ref={ref} variants={container} initial="hidden" animate="show" >
           {ProjectsData.map((projects) => (
             <Card key={projects.id} data={projects} />
           ))}
