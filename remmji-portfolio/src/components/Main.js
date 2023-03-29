@@ -132,7 +132,7 @@ const Main = () => {
       
       <Center click={click}>
         <YinYang onClick={()=> handleClick()} width={click ? 90 : 150} height={click ? 90 : 150} fill='currentColor'/>
-        <span>click here</span>
+        <span>Click</span>
       </Center>
 
       <Contact target="_blank" to="mailto:remek6@gmail.com">

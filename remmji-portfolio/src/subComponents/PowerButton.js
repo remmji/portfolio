@@ -2,8 +2,8 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { PowerBtn } from '../components/AllSvgs'
 import { Link } from "react-router-dom";
+import { HomeIcon } from '../components/AllSvgs';
 
 const Power = styled.button`
 position: fixed;
@@ -39,7 +39,7 @@ const  PowerButton = () => {
   return (
     <Power>
       <Link to='/'>
-        <PowerBtn width={30} height={30} fill='currentColor'/>
+        <HomeIcon width={30} height={30} fill='currentColor'/>
       </Link>
     </Power>
   )

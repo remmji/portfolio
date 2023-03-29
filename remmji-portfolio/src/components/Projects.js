@@ -2,11 +2,8 @@ import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./Themes";
 import { motion } from "framer-motion";
-
 import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
-
 import { ProjectsData } from "../data/ProjectData";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
@@ -82,7 +79,6 @@ const Projects = () => {
     <ThemeProvider theme={darkTheme}>
       <Box>
         <LogoComponent theme="dark" />
-        <SocialIcons theme="dark" />
         <PowerButton />
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
