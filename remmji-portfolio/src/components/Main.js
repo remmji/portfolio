@@ -8,6 +8,8 @@ import { YinYang } from './AllSvgs';
 import { useState } from 'react';
 import Intro from './Intro';
 import { motion } from 'framer-motion';
+import AnimatedPageTransition from "./AnimatedPageTransition";
+
 
 const MainContainer = styled.div`
 background: ${props =>props.theme.body};
@@ -57,23 +59,6 @@ transform: translate(-50%, -50%) rotate(-90deg);
 text-decoration: none;
 z-index: 1;
 `
-
-// const BottomBar = styled.div`
-// position: absolute;
-// bottom: 1rem;
-// left: 0;
-// right: 0;
-// width: 100%;
-
-// display: flex;
-// justify-content: center;
-// `
-
-// const SKILLS = styled(Link)`
-// color: ${props => props.theme.text};
-// text-decoration: none;
-// z-index: 1;
-// `
 const rotate = keyframes`
 from {
   transform: rotate(0);
@@ -137,6 +122,7 @@ const Main = () => {
 
 
   return (
+   <AnimatedPageTransition>
     <MainContainer>
       <DarkDiv click={click}/>
       <Container>
@@ -197,17 +183,10 @@ const Main = () => {
           About
         </motion.h2>
       </ABOUT>
-      {/* <BottomBar>
-      <SKILLS to="/skills">
-        <h2>
-          My Skills
-        </h2>
-      </SKILLS>
-      </BottomBar> */}
-
       </Container>
       {click ? <Intro click={click}/> : null}
     </MainContainer>
+    </AnimatedPageTransition>
   )
 }
 

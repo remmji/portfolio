@@ -7,7 +7,7 @@ import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
 import ParticlesComponent from '../subComponents/ParticlesComponent'
 import astronaut from '../assets/Images/spaceman.png'
-
+import AnimatedPageTransition from "./AnimatedPageTransition";
 
 
 const Box = styled.div`
@@ -30,6 +30,7 @@ top: 10%;
 right: 5%;
 width: 20vw;
 animation: ${float} 4s ease infinite;
+
 img{
   width: 100%;
   height: auto;
@@ -61,7 +62,7 @@ const Main =  styled.div`
 const AboutPage = () => {
   return (
 
-
+    <AnimatedPageTransition>
     <ThemeProvider theme={darkTheme}>
     <Box>
       <LogoComponent theme='dark'/>
@@ -78,7 +79,7 @@ const AboutPage = () => {
       </Main>
     </Box>
     </ThemeProvider>
-
+    </AnimatedPageTransition>
   )
 }
 

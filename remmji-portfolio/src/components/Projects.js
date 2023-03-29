@@ -10,6 +10,7 @@ import PowerButton from "../subComponents/PowerButton";
 import { ProjectsData } from "../data/ProjectData";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
+import AnimatedPageTransition from "./AnimatedPageTransition";
 
 
 const Box = styled.div`
@@ -77,6 +78,7 @@ const Projects = () => {
   }, []);
 
   return (
+    <AnimatedPageTransition>
     <ThemeProvider theme={darkTheme}>
       <Box>
         <LogoComponent theme="dark" />
@@ -93,6 +95,7 @@ const Projects = () => {
         </Rotate>
       </Box>
     </ThemeProvider>
+    </AnimatedPageTransition>
   );
 };
 

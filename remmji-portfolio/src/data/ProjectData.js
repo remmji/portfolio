@@ -2,7 +2,7 @@ export const ProjectsData = [
     {
         id:1,
         name:"E-Commerce",
-        description:"It is a website which mimics an online shop.It includes features such as a functional shopping cart with add and remove functionality, a checkout form, a lightbox and smooth animations.",
+        description:"It is a website which mimics an online shop. It includes features such as a functional shopping cart with add and remove functionality, a checkout form, lightbox and smooth animations.",
         tags:["HTML","CSS","React JS","react-router","Framer Motion"],
         
         demo:"https://my-app-remmji.vercel.app/",

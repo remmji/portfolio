@@ -91,6 +91,7 @@ justify-content: space-evenly;
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
 }
+
 @media (max-width: 22em){
 font-size: calc(0.4em + 1.4vw);
 &>*:last-child{
