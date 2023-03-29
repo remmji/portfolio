@@ -28,7 +28,7 @@ left: calc(0rem + 2vw);;
 
 const Line = styled(motion.span)`
 width: 2px;
-height: 8rem;
+height: 10vh;
 background-color: ${props => props.theme.text};
 `
 
@@ -67,7 +67,7 @@ const SocialIcons = (props) => {
             height:0
         }}
         animate={{
-            height: '8rem'
+            height: '10vh'
         }}
         transition={{
             type:'spring',duration:1, delay:0.8

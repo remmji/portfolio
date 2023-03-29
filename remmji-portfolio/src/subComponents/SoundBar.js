@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import music from "../assets/audio/u-said-it-v13-1167.mp3"
+import music from "../assets/audio/neonrain.mp3"
 import {useState} from 'react'
 import { keyframes } from 'styled-components'
 
@@ -11,6 +11,11 @@ position: fixed;
 left: 8rem;
 top: 3rem;
 z-index: 10;
+
+@media (max-width: 50em){
+left: 2rem;
+top:6rem;
+}  
 
 &>*:nth-child(1){
     animation-delay: 0.2s;
