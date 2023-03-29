@@ -62,16 +62,16 @@ width:70%;
 }
 
 @media (max-width: 55em){
-width:90%;
+width:80%;
 }
 
-@media (max-width: 45em){
-width:110%;
-}
-@media (max-width: 30em){
-width:110%;
+@media (max-width: 40em){
+width:40vw;
 }   
 
+@media (max-width: 30em){
+width:50vw;
+}   
 }
 
 `

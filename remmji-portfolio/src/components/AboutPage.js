@@ -41,19 +41,19 @@ const Main =  styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
-  width: 50vw;
-  height: 60vh;
+  width: 54vw;
+  height: 66vh;
   z-index: 3;
   line-height: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(0.6rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   backdrop-filter: blur(4px);
   
   position: absolute;
   left: calc(5rem + 5vw);
-  top: 10rem;
+  top: 8rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
 `
@@ -75,7 +75,9 @@ const AboutPage = () => {
       <Main>
         Hi there, I'm Remy, a self-taught front-end developer from Poland with a passion for creating beautiful and responsive web applications.
         <br/><br/>
-         I started my coding journey about six months ago, and since then, I've been fully immersed in learning everything I can about front-end development.
+         I started my coding journey about six months ago, and since then, I've been fully commited in learning everything I can about front-end development.
+         <br/><br/>
+         Outside of coding, I'm passionate about a few things that help me unwind and stay balanced. I love Brazilian Jiu-Jitsu (BJJ), the physical and mental challenge of training and competing in this martial art. I'm also a reader, particularly of fantasy books. When I'm not on the mat or reading, you can often find me enjoying a good TV series or running outside, both of which give me a chance to disconnect from technology and connect with nature.
       </Main>
     </Box>
     </ThemeProvider>
