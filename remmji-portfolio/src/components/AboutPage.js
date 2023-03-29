@@ -74,9 +74,9 @@ const AboutPage = () => {
       </Spaceman>
       <Main>
         Hi there, I'm Remy, a self-taught front-end developer from Poland with a passion for creating beautiful and responsive web applications.
-        <br/><br/>
+        <br /><br />
          I started my coding journey about six months ago, and since then, I've been fully commited in learning everything I can about front-end development.
-         <br/><br/>
+         <br /><br />
          Outside of coding, I'm passionate about a few things that help me unwind and stay balanced. I love Brazilian Jiu-Jitsu (BJJ), the physical and mental challenge of training and competing in this martial art. I'm also a reader, particularly of fantasy books. When I'm not on the mat or reading, you can often find me enjoying a good TV series or running outside, both of which give me a chance to disconnect from technology and connect with nature.
       </Main>
     </Box>
