@@ -11,8 +11,8 @@ export const ProjectsData = [
     {
         id:2,
         name:"Space Tourism",
-        description:"Space-Tourism is a visually appealing multi-page web application built with React.",
-        tags:["HTML","CSS","React Js","react-router"],
+        description:"Space-Tourism is a visually appealing multi-page web application built in React.",
+        tags:["HTML","CSS","React Js","react-router", "Framer Motion"],
         
         demo:"https://remmji.github.io/",
         github:"https://github.com/remmji/remmji.github.io/tree/main/space/space-tourism-app"
