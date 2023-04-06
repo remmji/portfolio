@@ -58,7 +58,7 @@ const SocialIcons = (props) => {
         animate={{ x: 0 }}
         whileHover={{ x: 8}}
         >
-            <Link to="https://www.linkedin.com/in/remigiusz-czarnecki-598989269/?original_referer=" style={{color: 'inherit'}} target="_blank" >
+            <Link to="linkedin.com/in/remigiusz-czarnecki-598989269" style={{color: 'inherit'}} target="_blank" >
                 <Linkedln width={25} height={25} fill={props.theme==="dark" ? darkTheme.text : darkTheme.body} />
             </Link>
         </motion.div>
