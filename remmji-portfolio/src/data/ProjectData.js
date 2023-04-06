@@ -29,7 +29,7 @@ export const ProjectsData = [
     },
     {
         id:4,
-        name:"",
+        name:"Coming soon",
         description:"",
         tags:[""],
         
@@ -38,7 +38,7 @@ export const ProjectsData = [
        
     },{
         id:5,
-        name:"",
+        name:"Coming soon",
         description:"",
         tags:[""],
         
@@ -48,7 +48,7 @@ export const ProjectsData = [
     },
     {
         id:6,
-        name:"",
+        name:"Coming soon",
         description:"",
         tags:["react"],
         
